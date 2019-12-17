@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "913611264199",
+    "firebase_url": "https://vehicle-gram.firebaseio.com",
+    "project_id": "vehicle-gram",
+    "storage_bucket": "vehicle-gram.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:913611264199:android:d58c2f981d982edb6b6ee2",
+        "android_client_info": {
+          "package_name": "com.feeltech.zonegram"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "913611264199-ri9n2hqap9op3kqrs5873c1t0cql14vc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZ6QXhXkLdMR3utEqLoTz0jwR6hivHxRo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "913611264199-ri9n2hqap9op3kqrs5873c1t0cql14vc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
