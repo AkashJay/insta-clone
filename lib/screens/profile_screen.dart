@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_app/models/user_model.dart';
+import 'package:flutter_app/screens/edit_screen.dart';
 import 'package:flutter_app/utilties/constants.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 
 class ProfileScreen extends StatefulWidget {
@@ -37,8 +40,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   children: <Widget>[
                     CircleAvatar(
                       radius: 50.0,
-                      backgroundImage: NetworkImage(
-                          'https://miro.medium.com/max/3150/1*o4kDi_EWNjz6Y5XJLbCJQw.jpeg'),
+                      backgroundColor: Colors.grey,
+                      backgroundImage: user.profileImageUrl.isEmpty
+                          ? AssetImage('assets/images/placeHolder.png')
+                          : CachedNetworkImageProvider(user.profileImageUrl),
                     ),
                     Expanded(
                       child: Column(
@@ -103,7 +108,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           Container(
                             width: 200.0,
                             child: FlatButton(
-                              onPressed: () => print('Edit Profile'),
+                              onPressed: () => Navigator.push(context,
+                                  MaterialPageRoute(
+                                    builder: (_) => EditProfileScreen(user: user,)
+                              )),
                               color: Colors.blue,
                               textColor: Colors.white,
                               child: Text(

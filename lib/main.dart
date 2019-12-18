@@ -32,6 +32,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Instagram Clone',
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(primaryIconTheme: Theme.of(context).primaryIconTheme.copyWith(
+        color: Colors.black,
+      )),
       home: _getScreenId(),
       routes: {
         LoginScreen.id: (context) => LoginScreen(),
